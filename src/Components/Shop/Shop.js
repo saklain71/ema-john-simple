@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { addToDb, getStoreCart } from '../../utilities/fakedb';
+import { addToDb } from '../fakedb';
 import Cart from '../Cart/Cart';
-import useCart from '../Hook/useNewCart';
+
 import Products from '../Products/Products';
 import './Shop.css'
 const Shop = () => {
     const [products, setData] = useState([]);
-    const [cart, setCart] = useCart();
+    const [cart, setCart] = useState([]);
     const [pageCount, setPageCount] = useState(0);
     const [page, setPage] = useState(0);
     const [size, setSize] = useState(10);
@@ -36,7 +36,7 @@ const Shop = () => {
     // add cart from local storage
 
     // useEffect(() => {
-    //     const storedCard = getStoreCart();
+    //     const storedCard = getStoredCart();
     //     const saveCart = [];
     //     for (const id in storedCard) {
     //         const addededProducts = products.find(product => product._id === id);

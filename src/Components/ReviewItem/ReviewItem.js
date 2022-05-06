@@ -4,6 +4,7 @@ import React from 'react';
 import './ReviewItem.css'; 
 
 const ReviewItem = (props) => {
+    console.log(props);
     const {product, handleRemoveProduct} = props;
     const {name, img, price, shipping, quantity} = product;
     return (
